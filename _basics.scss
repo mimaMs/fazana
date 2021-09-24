@@ -1,0 +1,90 @@
+/**********
+basic styles 
+***********/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: $font;
+    font-size: $fontSize;
+    color: $text 
+    // line-height: 1.6;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    transition: $transition;
+}
+.line{
+    background: linear-gradient(to right, $darkGreen,$green, $primary);
+    height: 5px;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.py {
+    padding: 100px 0;
+}
+h2 {
+    font-size: 3rem;
+    margin: 30px 0;
+    &::before {
+        display: block;
+        content: '';
+        width: 130px;
+        background: linear-gradient(to right, $darkGreen,$green, $primary);
+        height: 3px;
+        margin: 0 auto 20px auto;
+
+    }
+}
+.bg-gray {
+    background: $lightgray;
+}
+.headers {
+    img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+}
+.intro {
+    h1 {
+        font-size: 3rem;
+        margin: 30px 0;
+        color: $primary;
+    }
+    border-bottom: 3px double lighten($text, 50%);
+}
+.istraziteLista {
+    @include flex($items: flex-start);
+    article {
+        flex: 0 0 31%;
+        border-bottom: 2px double lightgray;
+        padding-bottom: 20px;
+        a {
+            img {
+                width: 100%;
+            }
+            &:hover {
+                opacity: .8;
+            }
+        }
+        h3 {
+            font-size: 1.2rem;
+            padding: 10px 0;
+        }
+    }
+}
+.singleHeaders {
+    background-color: $lightgray;
+    padding: 20px 0;
+    h3 {
+        font-size: 2rem;
+    }
+}
